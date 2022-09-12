@@ -1,0 +1,44 @@
+,model_name,type,url,entities,multilingual,dataset,data_url,framework
+0,cardiffnlp/twitter-roberta-base-sentiment,pipeline,https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment,"{0:'negative', 1:'neutral',2:'positive'} ",F,tweeteval,,pytorch
+1,cardiffnlp/twitter-roberta-base-sentiment-latest,pipeline,https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment-latest,"{0:'negative', 1:'neutral',2:'positive'} ",F,,,pytorch
+2,cardiffnlp/twitter-xlm-roberta-base-sentiment,pipeline,https://huggingface.co/cardiffnlp/twitter-xlm-roberta-base-sentiment,"Positive, Negative, Neutral",T,,,pytorch
+3,nlptown/bert-base-multilingual-uncased-sentiment,pipeline,https://huggingface.co/nlptown/bert-base-multilingual-uncased-sentiment,"1, 2, 3, 4, 5",T,,,pytorch
+4,finiteautomata/bertweet-base-sentiment-analysis,pipeline,https://huggingface.co/finiteautomata/bertweet-base-sentiment-analysis,"POS, NEG, NEU",F,amazon,,pytorch
+5,siebert/sentiment-roberta-large-english,pipeline,https://huggingface.co/siebert/sentiment-roberta-large-english,"{0:'negative,1:'positive'}",F,,,pytorch
+6,avichr/heBERT_sentiment_analysis,pipeline,https://huggingface.co/avichr/heBERT_sentiment_analysis,"Positive, Negative, Neutral",T,,,pytorch
+8,sbcBI/sentiment_analysis,pipeline,https://huggingface.co/sbcBI/sentiment_analysis_model,"{0:'negative', 1:'neutral',2:'positive'} ",F,,,pytorch
+9,sbcBI/sentiment_analysis_model,pipeline,https://huggingface.co/sbcBI/sentiment_analysis,"{0:'negative', 1:'neutral',2:'positive'} ",F,,,pytorch
+10,j-hartmann/sentiment-roberta-large-english-3-classes,pipeline,https://huggingface.co/j-hartmann/sentiment-roberta-large-english-3-classes,"positive, negative, neutral",F,,,pytorch
+11,rohanrajpal/bert-base-codemixed-uncased-sentiment,pipeline,https://huggingface.co/rohanrajpal/bert-base-codemixed-uncased-sentiment,"{0:'negative', 1:'neutral',2:'positive'} ",T,,,pytorch
+12,juliensimon/reviews-sentiment-analysis,pipeline,https://huggingface.co/juliensimon/reviews-sentiment-analysis,"{0:'negative', 1:'positive'} ",F,,,pytorch
+13,RANG012/SENATOR,pipeline,https://huggingface.co/RANG012/SENATOR,,,,,pytorch
+14,bhadresh-savani/distilbert-base-uncased-sentiment-sst2,pipeline,https://huggingface.co/bhadresh-savani/distilbert-base-uncased-sentiment-sst2,"POSITIVE, NEGATIVE",F,,,pytorch
+15,rabindralamsal/BERTsent,pipeline,https://huggingface.co/rabindralamsal/BERTsent,"{0:'negative', 1:'neutral',2:'positive'} ",F,,,pytorch
+16,dhpollack/distilbert-dummy-sentiment,pipeline,https://huggingface.co/dhpollack/distilbert-dummy-sentiment,"positive, negative",F,,,pytorch
+17,philschmid/distilbert-base-multilingual-cased-sentiment-2,pipeline,https://huggingface.co/philschmid/distilbert-base-multilingual-cased-sentiment-2,"positive, negative, neutral",F,,,pytorch
+18,clampert/multilingual-sentiment-covid19,pipeline,https://huggingface.co/clampert/multilingual-sentiment-covid19,"positive, negative",T,COVID19,,pytorch
+19,fhamborg/roberta-targeted-sentiment-classification-newsarticles,pipeline,https://huggingface.co/fhamborg/roberta-targeted-sentiment-classification-newsarticles,"{0:'negative', 1:'positive'} ",F,,,pytorch
+20,Seethal/sentiment_analysis_generic_dataset,pipeline,https://huggingface.co/Seethal/sentiment_analysis_generic_dataset,"{0:'negative', 1:'neutral',2:'positive'} ",F,,,pytorch
+21,federicopascual/finetuning-sentiment-model-3000-samples,pipeline,https://huggingface.co/federicopascual/finetuning-sentiment-model-3000-samples,"{0:'negative', 1:'positive'} ",F,imdb,,pytorch
+22,jkhan447/sentiment-model-sample-group-emotion,pipeline,https://huggingface.co/jkhan447/sentiment-model-sample-group-emotion,"0,1,2,3",F,,,pytorch
+24,RogerKam/roberta_fine_tuned_sentiment_newsmtsc,pipeline,https://huggingface.co/RogerKam/roberta_fine_tuned_sentiment_newsmtsc,"{0:'negative', 1:'neutral',2:'positive'} ",F,,,pytorch
+25,Souvikcmsa/SentimentAnalysisDistillBERT,pipeline,https://huggingface.co/Souvikcmsa/SentimentAnalysisDistillBERT,"positive, negative, neutral",F,,,pytorch
+26,yosemite/autonlp-imdb-sentiment-analysis-english-470512388,pipeline,https://huggingface.co/yosemite/autonlp-imdb-sentiment-analysis-english-470512388,"positive, negative",F,,,pytorch
+27,Souvikcmsa/BERT_sentiment_analysis,pipeline,https://huggingface.co/Souvikcmsa/BERT_sentiment_analysis,"positive, negative, neutral",F,,,pytorch
+28,amansolanki/autonlp-Tweet-Sentiment-Extraction-20114061,pipeline,https://huggingface.co/amansolanki/autonlp-Tweet-Sentiment-Extraction-20114061,"positive, negative, neutral",F,,,pytorch
+29,laurens88/finetuning-crypto-tweet-sentiment-test,pipeline,https://huggingface.co/laurens88/finetuning-crypto-tweet-sentiment-test,"POS, NEG, NEU",F,,,pytorch
+30,okho0653/Bio_ClinicalBERT-zero-shot-sentiment-model,pipeline,https://huggingface.co/okho0653/Bio_ClinicalBERT-zero-shot-sentiment-model,"{0:'negative', 1:'positive'} ",F,,,pytorch
+31,l3cube-pune/MarathiSentiment,pipeline,https://huggingface.co/l3cube-pune/MarathiSentiment,"Positive, Negative, Neutral",F,,,pytorch
+32,elozano/tweet_sentiment_eval,pipeline,https://huggingface.co/elozano/tweet_sentiment_eval,"Positive, Negative, Neutral",F,,,pytorch
+33,deepgai/tweet_eval-sentiment-finetuned,pipeline,https://huggingface.co/deepgai/tweet_eval-sentiment-finetuned,"Positive, Negative, Neutral",F,,,pytorch
+34,aXhyra/demo_sentiment_42,pipeline,https://huggingface.co/aXhyra/demo_sentiment_42,"Positive, Negative, Neutral",F,,,pytorch
+35,aXhyra/sentiment_trained_1234567,pipeline,https://huggingface.co/aXhyra/sentiment_trained_1234567,"Positive, Negative, Neutral",F,,,pytorch
+36,aXhyra/sentiment_trained_31415,pipeline,https://huggingface.co/aXhyra/sentiment_trained_31415,"Positive, Negative, Neutral",F,,,pytorch
+37,aXhyra/sentiment_trained_42,pipeline,https://huggingface.co/aXhyra/sentiment_trained_42,"Positive, Negative, Neutral",F,,,pytorch
+38,aXhyra/presentation_sentiment_42,pipeline,https://huggingface.co/aXhyra/presentation_sentiment_42,"Positive, Negative, Neutral",F,,,pytorch
+39,aXhyra/sentiment_trained,pipeline,https://huggingface.co/aXhyra/sentiment_trained,"Positive, Negative, Neutral",F,,,pytorch
+40,aXhyra/demo_sentiment_1234567,pipeline,https://huggingface.co/aXhyra/demo_sentiment_1234567,"Positive, Negative, Neutral",F,,,pytorch
+41,aXhyra/demo_sentiment_31415,pipeline,https://huggingface.co/aXhyra/demo_sentiment_31415,"Positive, Negative, Neutral",F,,,pytorch
+42,aXhyra/presentation_sentiment_1234567,pipeline,https://huggingface.co/aXhyra/presentation_sentiment_1234567,"Positive, Negative, Neutral",F,,,pytorch
+43,aXhyra/presentation_sentiment_31415,pipeline,https://huggingface.co/aXhyra/presentation_sentiment_31415,"Positive, Negative, Neutral",F,,,pytorch
+44,austinmw/distilbert-base-uncased-finetuned-tweets-sentiment,pipeline,https://huggingface.co/austinmw/distilbert-base-uncased-finetuned-tweets-sentiment,"Positive, Negative, Neutral",F,,,pytorch

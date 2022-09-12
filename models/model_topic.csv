@@ -1,0 +1,7 @@
+,model_name,type,url,entities,multilingual,dataset,data_url,framework
+0,cardiffnlp/tweet-topic-21-multi,token,https://huggingface.co/cardiffnlp/tweet-topic-21-multi,21,T,tweet_eval,,pytorch
+1,cardiffnlp/tweet-topic-19-multi,token,https://huggingface.co/cardiffnlp/tweet-topic-19-multi,,T,tweet_eval,,pytorch
+2,fabriceyhc/bert-base-uncased-yahoo_answers_topics,token,https://huggingface.co/fabriceyhc/bert-base-uncased-yahoo_answers_topics,,F,yahoo_answers_topics,,pytorch
+3,jonaskoenig/topic_classification_03,token,https://huggingface.co/cardiffnlp/jonaskoenig/topic_classification_03,,F,yahoo_answers_topics,,pytorch
+4,jonaskoenig/topic_classification_04,token,https://huggingface.co/cardiffnlp/jonaskoenig/topic_classification_04,,F,yahoo_answers_topics,,pytorch
+5,mrm8488/bert-tiny-finetuned-yahoo_answers_topics,token,https://huggingface.co/cardiffnlp/mrm8488/bert-tiny-finetuned-yahoo_answers_topics,,F,yahoo_answers_topics,,pytorch

@@ -1,0 +1,45 @@
+,model_name,type,url,entities,multilingual,dataset,data_url,framework
+0,Babelscape/wikineural-multilingual-ner,token,https://huggingface.co/Babelscape/wikineural-multilingual-ner,"LOC, ORG, PER, MISC",T,,https://huggingface.co/datasets/Babelscape/wikineural,pytorch
+1,brandon25/deberta-base-finetuned-ner,token,https://huggingface.co/brandon25/deberta-base-finetuned-ner,"LOC, ORG, PER, MISC",F,conll2003,,pytorch
+2,Davlan/bert-base-multilingual-cased-ner-hrl,token,,"LOC, ORG, PER",,,,pytorch
+3,Davlan/distilbert-base-multilingual-cased-ner-hrl,token,https://huggingface.co/Davlan/distilbert-base-multilingual-cased-ner-hrl,"LOC, ORG, PER",T,,,pytorch
+4,Davlan/xlm-roberta-base-ner-hrl,token,https://huggingface.co/Davlan/xlm-roberta-base-ner-hrl,"LOC, ORG, PER",T,,,pytorch
+5,Davlan/xlm-roberta-large-ner-hrl,token,https://huggingface.co/Davlan/xlm-roberta-large-ner-hrl,"LOC, ORG, PER",T,,,pytorch
+6,dslim/bert-base-NER,token,,"LOC, ORG, PER, MISC",F,,,pytorch
+7,dslim/bert-base-NER-uncased,token,,"LOC, ORG, PER, MISC",F,,,pytorch
+8,dslim/bert-large-NER,token,,"LOC, ORG, PER, MISC",F,,,pytorch
+9,flair/ner-english,flair,,"LOC, ORG, PER, MISC",,,,flair
+10,flair/ner-english-fast,flair,,"LOC, ORG, PER, MISC",,,,flair
+11,flair/ner-english-large,flair,,"LOC, ORG, PER, MISC",,,,flair
+12,flair/ner-multi,flair,,"LOC, ORG, PER, MISC",,,,flair
+13,flair/ner-multi-fast,flair,,"LOC, ORG, PER, MISC",,,,flair
+14,gunghio/distilbert-base-multilingual-cased-finetuned-conll2003-ner,token,https://huggingface.co/gunghio/distilbert-base-multilingual-cased-finetuned-conll2003-ner,"LOC, ORG, PER, MISC",T,conll2003,,pytorch
+15,huggingface-course/bert-finetuned-ner,token,https://huggingface.co/huggingface-course/bert-finetuned-ner,"LOC, ORG, PER, MISC",F,conll2003,,pytorch
+16,Jean-Baptiste/camembert-ner-with-dates,token,https://huggingface.co/Jean-Baptiste/camembert-ner-with-dates,"LOC, ORG, PER",,,,pytorch
+17,Jean-Baptiste/roberta-large-ner-english,token,https://huggingface.co/Jean-Baptiste/roberta-large-ner-english,"LOC, ORG, PER, MISC, O",,,,pytorch
+18,jplu/tf-xlm-r-ner-40-lang,token,https://huggingface.co/jplu/tf-xlm-r-ner-40-lang,"LOC, ORG, PER, O",T,,,pytorch
+19,kamalkraj/bert-base-cased-ner-conll2003,token,https://huggingface.co/kamalkraj/bert-base-cased-ner-conll2003,"LOC, ORG, PER, MISC",,conll2003,,pytorch
+20,NbAiLab/nb-bert-base-ner,token,https://huggingface.co/NbAiLab/nb-bert-base-ner,"ORG, LOC, PER, PROD, EVT, DRV, MISC",,norne,https://huggingface.co/datasets/norne,pytorch
+21,philschmid/distilroberta-base-ner-conll2003,token,https://huggingface.co/philschmid/distilroberta-base-ner-conll2003,"LOC, ORG, PER, MISC",F,conll2003,,pytorch
+22,ydshieh/roberta-large-ner-english,token,https://huggingface.co/ydshieh/roberta-large-ner-english,"LOC, ORG, PER, MISC, O",F,,,pytorch
+23,elastic/distilbert-base-uncased-finetuned-conll03-english,token,https://huggingface.co/elastic/distilbert-base-uncased-finetuned-conll03-english,"LOC, ORG, PER, MISC, O",F,conll2003,,pytorch
+24,elastic/distilbert-base-cased-finetuned-conll03-english,token,https://huggingface.co/elastic/distilbert-base-cased-finetuned-conll03-english,"LOC, ORG, PER, MISC, O",F,conll2003,,pytorch
+25,dominiqueblok/roberta-base-finetuned-ner,token,https://huggingface.co/dominiqueblok/roberta-base-finetuned-ner,"LOC, ORG, PER, MISC, O",F,conll2003,,pytorch
+26,bhadresh-savani/electra-base-discriminator-finetuned-conll03-english,token,https://huggingface.co/bhadresh-savani/electra-base-discriminator-finetuned-conll03-english,"LOC, ORG, PER, MISC, O",F,conll2003,,pytorch
+27,andi611/bert-large-uncased-whole-word-masking-ner-conll2003,token,https://huggingface.co/andi611/bert-large-uncased-whole-word-masking-ner-conll2003,"LOC, ORG, PER, MISC, O",F,conll2003,,pytorch
+28,malduwais/distilbert-base-uncased-finetuned-ner,token,https://huggingface.co/malduwais/distilbert-base-uncased-finetuned-ner,"LOC, ORG, PER, MISC, O",F,conll2003,,pytorch
+29,emilys/twitter-roberta-base-CoNLL,token,https://huggingface.co/emilys/twitter-roberta-base-CoNLL,"LOC, ORG, PER, MISC, O",F,conll2003,,pytorch
+30,sberbank-ai/bert-base-NER-reptile-5-datasets,token,https://huggingface.co/sberbank-ai/bert-base-NER-reptile-5-datasets,"LOC, ORG, PER, MISC, O",F,conll2003,,pytorch
+31,kamalkraj/bert-base-cased-ner-conll2003,token,https://huggingface.co/kamalkraj/bert-base-cased-ner-conll2003,"LOC, ORG, PER, MISC, O",F,conll2003,,pytorch
+32,autoevaluate/entity-extraction,token,https://huggingface.co/autoevaluate/entity-extraction,"LOC, ORG, PER, MISC, O",F,conll2003,,pytorch
+33,ArBert/albert-base-v2-finetuned-ner,token,https://huggingface.co/ArBert/albert-base-v2-finetuned-ner,"LOC, ORG, PER, MISC, O",F,conll2003,,pytorch
+34,roschmid/distilbert-base-uncased-finetuned-TT2-exam,token,https://huggingface.co/roschmid/distilbert-base-uncased-finetuned-TT2-exam,"LOC, ORG, PER, MISC, O",F,conll2003,,pytorch
+35,murdockthedude/distilbert-base-uncased-finetuned-ner,token,https://huggingface.co/murdockthedude/distilbert-base-uncased-finetuned-ner,"LOC, ORG, PER, MISC, O",F,conll2003,,pytorch
+36,kushaljoseph/bert-to-distilbert-NER,token,https://huggingface.co/kushaljoseph/bert-to-distilbert-NER,"LOC, ORG, PER, MISC, O",F,conll2003,,pytorch
+37,Nonzerophilip/bert-finetuned-ner,token,https://huggingface.co/Nonzerophilip/bert-finetuned-ner,"LOC, ORG, PER, MISC, O",F,conll2003,,pytorch
+38,romainlhardy/bert-finetuned-ner,token,https://huggingface.co/romainlhardy/bert-finetuned-ner,"LOC, ORG, PER, MISC, O",F,conll2003,,pytorch
+39,hossay/distilbert-base-uncased-finetuned-ner,token,https://huggingface.co/hossay/distilbert-base-uncased-finetuned-ner,"LOC, ORG, PER, MISC, O",F,conll2003,,pytorch
+40,Jorgeutd/bert-large-uncased-finetuned-ner,token,https://huggingface.co/Jorgeutd/bert-large-uncased-finetuned-ner,"LOC, ORG, PER, MISC, O",F,conll2003,,pytorch
+41,jjglilleberg/bert-finetuned-ner,token,https://huggingface.co/jjglilleberg/bert-finetuned-ner,"LOC, ORG, PER, MISC, O",F,conll2003,,pytorch
+42,MikhailGalperin/distilbert-base-uncased-finetuned-ner,token,https://huggingface.co/MikhailGalperin/distilbert-base-uncased-finetuned-ner,"LOC, ORG, PER, MISC, O",F,conll2003,,pytorch
+43,Aneela/bert-finetuned-ner,token,https://huggingface.co/Aneela/bert-finetuned-ner,"LOC, ORG, PER, MISC, O",F,conll2003,,pytorch

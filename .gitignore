@@ -1,0 +1,7 @@
+models/finetuned/*
+models/pretrained/*
+
+evaluation/conll2003/*
+evaluation/tweet_eval_val/*
+
+logs/*

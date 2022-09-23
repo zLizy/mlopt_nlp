@@ -55,11 +55,13 @@ def get_ground_truth(dataset_name,task):
             
     return df
 
-def createDataset(df):
+def createDataset(df,train_size=0.7):
     # Creating the dataset and dataloader for the neural network
-    train_size = 0.7
     train_dataset=df.sample(frac=train_size,random_state=200)
-    val_dataset=df.drop(train_dataset.index).reset_index(drop=True)
+    if(train_size>0.9999):
+        val_dataset=None
+    else:
+        val_dataset=df.drop(train_dataset.index).reset_index(drop=True)
     train_dataset = train_dataset.reset_index(drop=True)
 
     # train_encodings = tokenizer(list(train_dataset['text']), truncation=True,padding=True, is_split_into_words=True)
@@ -86,8 +88,8 @@ def getCustomDataset(tokenizer,training_set,val_set):
 
 def getNewDataset(tokenizer,training_set,val_set):
 
-    train_dataset = newDataset(tokenizer, list(training_set['text']), list(training_set['labels']), MAX_LEN) #(train_encodings, train_labels)
-    val_dataset = newDataset(tokenizer, list(val_set['text']), list(val_set['labels']), MAX_LEN) #(val_encodings, val_labels)
+    train_dataset = newDataset(tokenizer, list(training_set['text']), list(training_set['labels'])) #(train_encodings, train_labels)
+    val_dataset = newDataset(tokenizer, list(val_set['text']), list(val_set['labels'])) #(val_encodings, val_labels)
 
     return train_dataset, val_dataset
 
@@ -153,6 +155,19 @@ def getTokenizedDataset(tokenizer,training_set,val_set):
 
 
 ######### Dataset Class
+
+class newDataset(torch.utils.data.Dataset):
+    def __init__(self,tokenizer,data,label):
+        self.tokenizer=tokenizer
+        self.data=data
+        self.label=label
+    def __getitem__(self,idx):
+        token= self.tokenizer(self.data[idx], return_tensors='pt',padding='max_length',max_length=512,truncation=True)
+        l=self.label[idx]
+        return token,l
+    
+    def __len__(self):
+        return len(self.label)
 
 ### create pytorch dataset object
 class XDataset(torch.utils.data.Dataset):

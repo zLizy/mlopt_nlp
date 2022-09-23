@@ -3,11 +3,11 @@ from GPUtil import showUtilization as gpu_usage
 import pandas as pd
 from datasets import load_metric
 from torch.utils.data import Dataset, DataLoader, RandomSampler, SequentialSampler
-from transformers import AutoModelForTokenClassification, PreTrainedModel, AutoConfig,AutoTokenizer
+from transformers import AutoModelForTokenClassification, PreTrainedModel, AutoConfig,AutoTokenizer,AutoModelForSequenceClassification
 from torch import cuda
 import evaluate
 import torch
-device = 'cuda' if cuda.is_available() else 'cpu'
+device = 'cuda:0' if cuda.is_available() else 'cpu'
 import accelerate
 import time
 from pynvml import *
@@ -121,10 +121,10 @@ def compute_metrics(p,task):
  ####### Sections of config
 # Defining some key variables that will be used later on in the training
 MAX_LEN = 50
-TRAIN_BATCH_SIZE = 8
-VALID_BATCH_SIZE = 8
+TRAIN_BATCH_SIZE = 50
+VALID_BATCH_SIZE = 50
 EPOCHS = 10
-LEARNING_RATE = 1e-05
+LEARNING_RATE = 1e-03
 # tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 
 train_params = {'batch_size': TRAIN_BATCH_SIZE,
@@ -145,18 +145,19 @@ class FinetuneClass(PreTrainedModel):
     def __init__(self,model_name,task,num_labels,freeze_encoder=False):
         model_path = './pretrained/{}'.format(model_name.replace('/','_'))
         # super(FinetuneClass, self).__init__()
-        config = AutoConfig.from_pretrained(model_path)
+        config = AutoConfig.from_pretrained(model_name)
         super().__init__(config)
         torch.cuda.empty_cache()
-        try:
-            self.l1 = AutoModelForTokenClassification.from_pretrained(model_path,device_map='auto', load_in_8bit=True).to(device)
+        try: #TODO sequenceClassification
+            self.l1 = AutoModelForTokenClassification.from_pretrained(model_name,device_map='auto', load_in_8bit=True).to(device)
         except:
             print('device_map not working')
-            self.l1 = AutoModelForTokenClassification.from_pretrained(model_path).to("cpu")#.to(device)# torch_dtype=torch.float16
+            self.l1 = AutoModelForTokenClassification.from_pretrained(model_name).to("cpu")#.to(device)# torch_dtype=torch.float16
             torch.cuda.empty_cache()
         # AutoModelForTokenClassification.from_pretrained(model_name, num_labels=num_labels)
         in_features = self.l1.classifier.in_features
-        self.l1.classifier = torch.nn.Linear(in_features,num_labels).to("cpu")#.to(device)
+        print('in_features',in_features)
+        self.l1.classifier = torch.nn.Linear(in_features,num_labels).to(device)
         self.l1.num_labels = num_labels
         # model.config.num_labels = 2
         # self.l2 = torch.nn.Dropout(0.3)
@@ -168,10 +169,31 @@ class FinetuneClass(PreTrainedModel):
         # output = self.l3(output_2)
         return output_1
 
-    # def forward(self, ids, mask, labels):
-    #     output_1= self.l1(ids, attention_mask = mask, labels = labels)
-    #     # output_2 = self.l2(output_1[0])
-    #     # output = self.l3(output_2)
-    #     return output_1
+class FinetuneClassTopic(PreTrainedModel):
+    def __init__(self,model_name,model_type,num_labels,freeze_encoder=False):
+        # super(FinetuneClass, self).__init__()
+        config = AutoConfig.from_pretrained(model_name)
+        super().__init__(config)
+        torch.cuda.empty_cache()
+        if model_type=='TF':
+            self.l1 = AutoModelForSequenceClassification.from_pretrained(model_name,from_tf=True).to(device)
+        else:
+            self.l1 = AutoModelForSequenceClassification.from_pretrained(model_name).to(device)
+        if(model_name.startswith('cardiffnlp') 
+            or model_name in ['boronbrown48/1_model_topic_classification_v2','dhtocks/Topic-Classification','boronbrown48/wangchanberta-topic-classification'] ):
+            self.l1.classifier.out_proj=torch.nn.Linear(in_features=768,out_features=num_labels,bias=True).to(device)
+        else:
+            in_features = self.l1.classifier.in_features
+            self.l1.classifier = torch.nn.Linear(in_features,num_labels).to(device)
+        self.l1.num_labels = num_labels
+        # model.config.num_labels = 2
+        # self.l2 = torch.nn.Dropout(0.3)
+        # self.l3 = torch.nn.Linear(768, 5)
+    
+    def forward(self, input_ids = None, attention_mask = None, labels = None):
+        output_1= self.l1(input_ids=input_ids,attention_mask=attention_mask,labels=labels)
+        # output_2 = self.l2(output_1[0])
+        # output = self.l3(output_2)
+        return output_1
     
 

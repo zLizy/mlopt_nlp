@@ -1,0 +1,13 @@
+,model_name,model_type,dataset,cost,0_f1-score,1_f1-score,2_f1-score,3_f1-score,4_f1-score,5_f1-score,6_f1-score,7_f1-score,8_f1-score,9_f1-score,macro avg_f1-score,weighted avg_f1-score
+0,cardiffnlp/tweet-topic-21-single,pytorch,tweet_eval,0.2787718755485368,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.534,0.0,0.0,0.053,0.194
+1,cardiffnlp/tweet-topic-19-single,pytorch,tweet_eval,0.2791473996030153,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.534,0.0,0.0,0.053,0.194
+2,fabriceyhc/bert-base-uncased-yahoo_answers_topics,pytorch,tweet_eval,0.2788403913052413,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.534,0.0,0.0,0.053,0.194
+3,mrm8488/bert-tiny-finetuned-yahoo_answers_topics,pytorch,tweet_eval,0.0095168769794659,0.593,0.419,0.376,0.42,0.674,0.838,0.398,0.789,0.255,0.749,0.551,0.738
+4,jonaskoenig/topic_classification_03,TF,tweet_eval,0.0110847881165219,0.667,0.497,0.489,0.495,0.692,0.851,0.513,0.797,0.365,0.796,0.616,0.766
+5,jonaskoenig/topic_classification_04,TF,tweet_eval,0.0112178632278358,0.609,0.253,0.528,0.353,0.708,0.855,0.385,0.808,0.0,0.77,0.527,0.746
+6,foundkim/topic_classifier,pytorch,tweet_eval,0.2791686858573969,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.534,0.0,0.0,0.053,0.194
+7,boronbrown48/1_model_topic_classification_v2,pytorch,tweet_eval,0.2794490452230411,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.534,0.0,0.0,0.053,0.194
+8,boronbrown48/wangchanberta-topic-classification,,tweet_eval,0.2791340090062496,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.534,0.0,0.0,0.053,0.194
+9,ebrigham/yahoo_answers_topics_classifier,,tweet_eval,0.1418764539008593,0.631,0.452,0.475,0.392,0.702,0.842,0.374,0.805,0.149,0.772,0.56,0.75
+10,jonaskoenig/topic_classification_01,TF,tweet_eval,0.0110938764202102,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.534,0.0,0.0,0.053,0.194
+11,jonaskoenig/topic_classification_01,TF,tweet_eval,0.011078374334439162,0.611,0.512,0.46,0.377,0.715,0.859,0.45,0.815,0.251,0.777,0.583,0.761

@@ -55,7 +55,7 @@ def evaluation_func(model_name):
 
 def topic_model_pipeline():
     task =  'topic' 
-    
+    os.remove('../topic_evaluation/evaluation.csv')
     df_model = pd.read_csv('model_{}.csv'.format(task))
     for i, row in df_model.loc[:].iterrows():
         model_name = row['model_name']

@@ -41,7 +41,7 @@ def record_prediction(model_name, prediction_nparray):
     np.save('../topic_evaluation/ground_truth.npy'.format(model_name),prediction_nparray)
     
 def write_result(evaluation_hf,task,inference_time,model_name,model_type):
-    path = '../topic_evaluation/evaluation.csv'.format(model_name)
+    path = '../topic_evaluation/evaluation.csv'
     if not os.path.exists(path):
         df = pd.DataFrame(columns=['model_name','model_type','task','dataset','cost'])
     else:
